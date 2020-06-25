@@ -1,14 +1,24 @@
 import fetch from "isomorphic-unfetch";
-import Product from "../components/product.component";
+import ProductsContainer from "../components/productsContainer/ProductsContainer";
+import Link from "next/link";
 
 export default function Products({ data }) {
-    console.log("data :>> ", data);
+    return (
+        <>
+            <button>
+                <Link href="/show-redux-state">
+                    <a>Click to see current Redux State</a>
+                </Link>
+            </button>
+            <button>
+                <Link href="/cart">
+                    <a>GO TO CART</a>
+                </Link>
+            </button>
 
-    return data.map(({ items, title }) => {
-        return items.map((item) => {
-            return <Product key={item.id} item={item} />;
-        });
-    });
+            <ProductsContainer data={data} />
+        </>
+    );
 }
 
 export async function getServerSideProps() {

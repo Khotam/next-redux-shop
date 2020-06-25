@@ -12,13 +12,20 @@ const Index = () => {
 
     return (
         <>
-            {/* <Examples />
+            {/* <Examples /> */}
             <Link href="/show-redux-state">
                 <a>Click to see current Redux State</a>
-            </Link> */}
-            <div style={{ marginBottom: 10 }}></div>
+            </Link>
             <Link href="/products">
-                <a>See products</a>
+                <a>
+                    <button>See products</button>
+                </a>
+            </Link>
+
+            <Link href="/cart">
+                <a>
+                    <button>See cart</button>
+                </a>
             </Link>
         </>
     );

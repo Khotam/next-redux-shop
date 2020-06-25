@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid green;
+}
+
+.container img {
+    width: 100%;
+    max-width: 200px;
+}
